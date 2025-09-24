@@ -1,0 +1,22 @@
+.card-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.heading{
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 30px;
+  align-content: center;
+  padding: 20px;
+  margin: 20px;
+  margin-left: 30px;
+  text-decoration: underline
+  ;
+
+}

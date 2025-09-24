@@ -1,0 +1,25 @@
+/*Styling the individual cards
+*/
+.card{
+    background-color: rgb(145, 144, 223);
+    border-radius: 5px;
+    padding: 16px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(159, 143, 143, 0.1);
+}
+
+.card h3{
+    margin-top: 0;
+}
+
+.card-image {
+  width: 60%;
+  height: 60%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  padding: 10px;
+  margin: 10px;
+
+}
