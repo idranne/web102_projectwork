@@ -40,18 +40,12 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 The walkthrough is found in Project 2 / Flashcard / public in a .mp4 recording file. You have to download the file before viewing it. 
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+GIF created with ...  Snipping tool from Windows 11
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I faced challenges with the CSS card implementation and knowing which CSS styling to use. I also faced difficulties with the useState because I did not know where to updates my function, but I figured it out after reading through the lecture slides
 
 ## License
 
