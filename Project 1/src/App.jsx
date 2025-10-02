@@ -89,7 +89,8 @@ function App() {
   
       <div className="heading">
         <h1 className="heading">FIRST GEN FORWARD: COLLEGE RESOURCES FOR TRAIlBLAZERS</h1>
-      </div><div className='card-grid'>
+      </div>
+      <div className='card-grid'>
         {events.map((card, index) => (
           <Card
             key={index}
