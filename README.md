@@ -2,7 +2,7 @@
 
 Submitted by: **Idranne Mbah**
 
-This web app: **insert description**
+This web app: **This modified project versiin from Project 3 includes a series of questions that permit new users to gain basic knowledge about France and the fracophone world before embarking onba trip to France. This modified version has the benefit of prompting the user to enter a guess before visiting the correct answer for each question**
 
 Time spent: **4-5** hours spent in total
 
