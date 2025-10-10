@@ -33,6 +33,14 @@ function App() {
     //showing answer
     const [showAnswer, setShowAnswer] = useState(false);
 
+    const [score, setScore] = useState(0);
+
+    //answer from the user
+    const [userAnswer, setUserAnswer] = useState('');
+
+    //true or false from the user
+    const [isError, setIsError] = useState(false);
+
     //get the question + answer at that index
     const currentQuestion = questionsLists[currentIndex].question;
     const currentAnswer = questionsLists[currentIndex].answer;
@@ -45,6 +53,8 @@ function App() {
         //SET THE STATE TO BE THE NEXT INDEX
         setCurrentIndex(currentIndex +1);
         setShowAnswer(false);
+        setUserAnswer('');
+        setIsCorrect(false);
       };
     }
 
@@ -53,6 +63,8 @@ function App() {
       if(currentIndex > 0){
         setCurrentIndex(currentIndex - 1);
         setShowAnswer(false);
+        setUserAnswer('');
+        setIsCorrect(false);
       }
     }
     
@@ -63,6 +75,32 @@ function App() {
       setShowAnswer((prev) => !prev);
     };
 
+    //grabing user input
+    const handleChange = (e) =>{
+      setUserAnswer(e.target.value);
+    };
+
+  
+
+    const handleSubmit = (e) => {
+      //if that condition is false
+      e.preventDefault();
+      //making everything valid and on the same scale
+      const correctAnswer = questionsLists[currentIndex].answer.trim().toLowerCase();
+      const userResponse = userAnswer.trim().toLowerCase();
+     setIsError(correctAnswer === userResponse);
+     setScore (score +1);
+
+    }
+
+    //changing styling
+    const inputStyle = {
+      border: isError ? '5px solid green': '5px solid red',
+      borderRadius: '5px',
+      padding: '8px'
+      
+    };
+
   
   return (
     <>
@@ -71,6 +109,11 @@ function App() {
             <h2>How quickly can you learn about France? If you earn 10points and above, you earn a trip to France😊</h2>
             <h2>Translate the following phrase in English while boosting your knowledge of France culture</h2>
             <h3>Number of cards to play: 15</h3>
+                    {userAnswer && (
+    <><p style={{ color: isError ? 'green' : 'red' }}>
+                {isError ? '✅ Correct!' : '❌ Try again'}
+              </p><p className = "score">  Score = {score} / {questionsLists.length} </p></>
+  )}
 
             {/* Flashcard container */}
       <div
@@ -82,10 +125,31 @@ function App() {
             <p>{questionsLists[currentIndex].question}</p>
           </div>
           <div className="flashcard-back">
-            <p>{questionsLists[currentIndex ].answer}</p>
+            <p>{questionsLists[currentIndex].answer}</p>
           </div>
         </div>
-      </div>
+        </div>
+        
+        <div className = "guest-input">
+          <h2>Type your answer in the text box below</h2>
+
+
+          <form onSubmit = {handleSubmit}>
+            <label>
+              Guess your answer here:
+              <input type = "text" 
+              className ="input-box"
+               placeholder = "Place your answer here"
+              value={userAnswer} 
+              style = {inputStyle} 
+              onChange={handleChange}/>
+            </label>
+            
+     
+   <button type= "submit" className = "guess-btn">Submit Guess </button>
+          </form>
+       
+          </div>
 
       {/* Navigation buttons */}
       <div className="buttons">
@@ -95,9 +159,12 @@ function App() {
         <button
           onClick={handleNext}
           disabled={currentIndex === questionsLists.length - 1}
+
+          
         >
           Next
         </button>
+        <button>Shuffle Cards</button>
       </div>
     </div>
     </>

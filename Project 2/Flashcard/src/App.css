@@ -71,3 +71,14 @@ button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
+
+.score{
+  border-radius: 50%;
+  border-color: black;
+}
+
+.guess-btn{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
