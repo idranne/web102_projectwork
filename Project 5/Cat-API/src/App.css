@@ -1,0 +1,65 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.fetchData {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.fetchData img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.fetchData h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.fetchData p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.randomBtn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.randomBtn button {
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.randomBtn button:hover {
+  background-color: #005fa3;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  
+}
+
